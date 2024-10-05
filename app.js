@@ -1,3 +1,13 @@
+// Navbar background change on scroll
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
 // Texas CO2 Emission Chart
 const ctxTexas = document.getElementById('texasChart').getContext('2d');
 const texasChart = new Chart(ctxTexas, {
