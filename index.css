@@ -1,0 +1,120 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f7f9fc;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: #333;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 100px;
+    background: #e3f2fd;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    padding: 10px 30px;
+    background-color: #ff5722;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #e64a19;
+}
+
+.hero-graphic {
+    max-width: 50%;
+}
+
+canvas {
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+/* Introduction Section */
+.introduction {
+    padding: 50px 100px;
+    background-color: #ffffff;
+}
+
+.introduction h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.introduction p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+/* Story Section */
+.climate-story {
+    padding: 50px 100px;
+    background-color: #e3f2fd;
+}
+
+.story-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.story-text {
+    max-width: 45%;
+}
+
+.story-visual {
+    max-width: 45%;
+}
+
+/* Predictive Model Section */
+.predictive-model {
+    padding: 50px 100px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.model-link {
+    padding: 10px 30px;
+    background-color: #ff5722;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.model-link:hover {
+    background-color: #e64a19;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}

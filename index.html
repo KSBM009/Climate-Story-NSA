@@ -3,10 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Climate Story</title>
-  </head>
-  <body>
-    <h1>testing first push</h1>
-  </body>
+    <title>NASA Climate Story: Telling Climate Data through 2D Models</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>NASA Climate Story: Climate Change in 2D Models</h1>
+            <p>Explore climate change data through interactive models. Learn how climate change impacts different regions and how data drives our understanding of the future.</p>
+            <a href="#story-section" class="cta-btn">Explore Climate Data</a>
+        </div>
+        <div class="hero-graphic">
+            <!-- Placeholder for 2D Model -->
+            <canvas id="modelCanvas"></canvas>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="introduction" id="intro-section">
+        <h2>Introduction</h2>
+        <p>Over the last several decades, an enormous amount of climate data has been collected from numerous sources. The US Greenhouse Gas (GHG) Center provides public access to this data, but the challenge is how to make sense of it. This website aims to tell a compelling story about climate change through open-source data. Our goal is to educate, motivate, and illustrate the pressing climate issues, such as rising sea levels, extreme weather events, and increasing temperatures.</p>
+    </section>
+
+    <!-- Story Section -->
+    <section class="climate-story" id="story-section">
+        <h2>Climate Change Story</h2>
+        <div class="story-container">
+            <div class="story-text">
+                <h3>CO2 Emissions in Texas</h3>
+                <p>Texas has long been known for its energy-driven economy, which contributes significantly to global CO2 emissions. During the COVID-19 lockdowns, emissions dropped dramatically, showing how small changes can have a big impact.</p>
+            </div>
+            <div class="story-visual">
+                <canvas id="texasChart"></canvas>
+            </div>
+        </div>
+        
+        <div class="story-container">
+            <div class="story-text">
+                <h3>California Coastal Emissions</h3>
+                <p>California’s coastal regions face unique challenges from CO2 emissions. The ocean’s ability to absorb CO2 is decreasing, signaling a pressing environmental crisis.</p>
+            </div>
+            <div class="story-visual">
+                <canvas id="californiaChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Predictive Model Section -->
+    <section class="predictive-model">
+        <h2>Climate Predictions: Machine Learning Forecast</h2>
+        <div class="prediction-container">
+            <p>Our machine learning model analyzes current environmental trends to forecast whether the situation is “safe” or in “danger”. Explore how data predicts the future of our planet and the impact of CO2 levels.</p>
+            <a href="https://colab.research.google.com/drive/162kjWlXm5yl4gw6nFZKERq5G0XuXxttT" class="model-link">Explore Prediction Model</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>NASA Space Apps Hackathon | Climate Storytelling Powered by Data</p>
+    </footer>
+
+    <!-- Scripts for Graphs -->
+    <script src="app.js"></script>
+</body>
 </html>
