@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenhouse Gas Effect on Texas</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f5;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 48px;
+            text-align: center;
+            color: #0047ab;
+        }
+
+        #map {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        #map img {
+            max-width: 80%;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content p {
+            line-height: 1.6;
+        }
+
+        .data-table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        .data-table th, .data-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .data-table th {
+            background-color: #0047ab;
+            color: #fff;
+        }
+
+        .data-table td {
+            background-color: #e6f2ff;
+        }
+
+        canvas {
+            display: block;
+            margin: 0 auto;
+            width: 100%;  /* Set the canvas width to 100% */
+            max-width: 1200px; /* Maximum width of the canvas */
+            height: 600px; /* Set the height to 600px for a bigger graph */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Greenhouse Gas Effect on Texas</h1>
+
+    <div id="map">
+        <img src="texasCities.gif" alt="Map of Texas">
+    </div>
+
+    <div class="content">
+        <h2>Overview</h2>
+        <p>
+            Texas, the second-largest state in the U.S. both by area and population, is a major player in the country’s economy, particularly in energy production. Known for its vast natural resources, Texas has been a leader in oil and natural gas extraction for decades, making it an essential hub for energy infrastructure and production. However, with this energy dominance comes environmental challenges, including significant greenhouse gas emissions.
+        </p>
+
+        <h2>Greenhouse Gas Emissions</h2>
+        <p>
+            Carbon dioxide (CO2) is the most abundant greenhouse gas in Texas. CO2 emissions peaked in the early 2000s, largely driven by fossil fuel combustion in the transportation and energy sectors. Methane (CH4), primarily from oil and gas production, as well as livestock farming, is the second most prevalent greenhouse gas. While regulatory efforts have reduced emissions, Texas remains one of the top contributors to national emissions.
+        </p>
+
+        <h3>Data Interpretation</h3>
+        <p>
+            The data indicates that overall greenhouse gas emissions peaked around 2005, with a gradual decline in CO2 emissions due to cleaner energy sources and regulatory measures. Methane emissions have remained steady, driven by the energy and agricultural sectors. Fluorinated gases and nitrous oxide, though present in smaller amounts, still contribute to the state’s environmental impact.
+        </p>
+    </div>
+
+    <h2 style="text-align: center;">Greenhouse Gas Emissions Over Time</h2>
+    <canvas id="gasChart"></canvas>
+
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Carbon Dioxide (MMT CO2 eq.)</th>
+                <th>Methane (MMT CO2 eq.)</th>
+                <th>Nitrous Oxide (MMT CO2 eq.)</th>
+                <th>Fluorinated Gases (MMT CO2 eq.)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1990</td><td>5,131.65</td><td>924.80</td><td>412.99</td><td>125.45</td></tr>
+            <tr><td>1995</td><td>5,425.80</td><td>916.67</td><td>426.94</td><td>146.26</td></tr>
+            <tr><td>2000</td><td>6,023.13</td><td>871.44</td><td>418.29</td><td>170.11</td></tr>
+            <tr><td>2005</td><td>6,126.86</td><td>853.97</td><td>429.53</td><td>153.15</td></tr>
+            <tr><td>2010</td><td>5,668.74</td><td>858.44</td><td>422.67</td><td>171.40</td></tr>
+            <tr><td>2015</td><td>5,368.29</td><td>828.06</td><td>439.31</td><td>176.57</td></tr>
+            <tr><td>2020</td><td>4,688.97</td><td>794.65</td><td>400.23</td><td>186.32</td></tr>
+        </tbody>
+    </table>
+
+    <script>
+        const ctx = document.getElementById('gasChart').getContext('2d');
+        const gasChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['1990', '1995', '2000', '2005', '2010', '2015', '2020'],
+                datasets: [{
+                    label: 'Carbon Dioxide (MMT CO2 eq.)',
+                    data: [5131.65, 5425.80, 6023.13, 6126.86, 5668.74, 5368.29, 4688.97],
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    fill: true
+                },
+                {
+                    label: 'Methane (MMT CO2 eq.)',
+                    data: [924.80, 916.67, 871.44, 853.97, 858.44, 828.06, 794.65],
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    fill: true
+                },
+                {
+                    label: 'Nitrous Oxide (MMT CO2 eq.)',
+                    data: [412.99, 426.94, 418.29, 429.53, 422.67, 439.31, 400.23],
+                    borderColor: 'rgba(255, 206, 86, 1)',
+                    backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                    fill: true
+                },
+                {
+                    label: 'Fluorinated Gases (MMT CO2 eq.)',
+                    data: [125.45, 146.26, 170.11, 153.15, 171.40, 176.57, 186.32],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: false
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
