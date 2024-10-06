@@ -13,16 +13,6 @@ h1, h2, h3 {
     color: #333;
 }
 
-/* Custom Cursor */
-.cursor {
-    pointer-events: none;
-    z-index: 1001;
-    position: absolute;
-}
-.cursor img {
-    width: 50px;
-}
-
 /* Navbar */
 .navbar {
     position: fixed;

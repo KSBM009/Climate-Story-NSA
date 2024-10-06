@@ -1,26 +1,17 @@
-const cursor = document.getElementById('cursor');
 const intro = document.getElementById('intro');
 
 // Smooth scroll functionality
-intro.addEventListener('click',function(){
+intro.addEventListener('click', function(){
     document.getElementById("intro_page").scrollIntoView({ behavior: "smooth" });
 });
-document.getElementById('prediction_btn').addEventListener('click',function(){
-    document.getElementById('prediction_widget').scrollIntoView({behavior:"smooth"});
+document.getElementById('prediction_btn').addEventListener('click', function(){
+    document.getElementById('prediction_widget').scrollIntoView({behavior: "smooth"});
 });
-document.getElementById('logo').addEventListener('click',function(){
-    document.getElementById('sec1').scrollIntoView({behavior:"smooth"});
+document.getElementById('logo').addEventListener('click', function(){
+    document.getElementById('sec1').scrollIntoView({behavior: "smooth"});
 });
-document.getElementById('ex').addEventListener('click',function(){
-    document.getElementById('examples').scrollIntoView({behavior:"smooth"});
-});
-
-// Custom cursor functionality
-document.addEventListener('mousemove',function(e){
-    const scrollX = window.scrollX;
-    const scrollY = window.scrollY;
-    cursor.style.left = `${e.clientX + scrollX}px`;
-    cursor.style.top = `${e.clientY + scrollY}px`;
+document.getElementById('ex').addEventListener('click', function(){
+    document.getElementById('examples').scrollIntoView({behavior: "smooth"});
 });
 
 // Chart.js configuration for emissions
