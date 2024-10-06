@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <h1>Louisiana</h1>
+  <img src="https://th.bing.com/th/id/OIP.dnYR2IFVzu3QCiwH0wVgEgHaHa?rs=1&pid=ImgDetMain.png" alt="Louisiana Map">
+  <title>Louisiana Greenhouse Gas Emissions</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+    }
+    img {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+        }
+    p {
+      text-align: justify;
+      color: #34495e;
+    }
+    #chartContainer {
+      width: 100%;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Louisiana Greenhouse Gas Emissions</h1>
+  <p>Louisiana, a state located in the southeastern region of the United States, is known for its diverse cultural heritage and natural landscapes, including the vast Mississippi River Delta. However, Louisiana also faces significant environmental challenges, including the impacts of greenhouse gas emissions. The energy sector, industrial activities, and transportation contribute heavily to the state's carbon footprint, impacting local ecosystems and contributing to global climate change.</p>
+
+  <div id="chartContainer">
+    <canvas id="emissionsChart"></canvas>
+  </div>
+</div>
+
+<script>
+  const ctx = document.getElementById('emissionsChart').getContext('2d');
+  const emissionsChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022],
+      datasets: [
+        {
+          label: 'Carbon Dioxide (MMT CO2 eq)',
+          data: [5131.65, 5076.3, 5178.73, 5279.48, 5361.82, 5425.8, 5601.06, 5673.11, 5736.33, 5800.25, 6023.13, 5903.53, 5947.79, 6006.42, 6111.52, 6126.86, 6045.3, 6121.52, 5919.21, 5486.09, 5668.74, 5540.33, 5332.81, 5473.66, 5529.88, 5368.29, 5246.4, 5196.54, 5362.19, 5234.49, 4688.97, 5017.2, 5053.02],
+          borderColor: '#3498db',
+          fill: false
+        },
+        {
+          label: 'Methane (MMT CO2 eq)',
+          data: [924.8, 931.86, 927.85, 915.52, 926.01, 916.67, 913.59, 897.65, 885.98, 868.34, 871.44, 858.56, 859.15, 856.21, 859.54, 853.97, 861.14, 867.27, 875.1, 862.5, 858.44, 831.88, 819.27, 821.77, 814.11, 828.06, 796.52, 817.13, 827.01, 806.83, 794.65, 782.58, 760.79],
+          borderColor: '#2ecc71',
+          fill: false
+        },
+        {
+          label: 'Nitrous Oxide (MMT CO2 eq)',
+          data: [412.99, 402.87, 400.57, 422.16, 424, 426.94, 440.31, 422.96, 427, 424.09, 418.29, 426.62, 431.8, 430.25, 442.07, 429.53, 427.99, 440.56, 423.26, 418.48, 422.67, 426.38, 399.66, 441.2, 444.6, 439.31, 418.44, 426.05, 446.72, 421.92, 400.23, 408.92, 398.82],
+          borderColor: '#e74c3c',
+          fill: false
+        },
+        {
+          label: 'Fluorinated Gases (MMT CO2 eq)',
+          data: [125.45, 118.27, 122.95, 123.66, 128.24, 146.26, 157.94, 168.34, 183.81, 183.83, 170.11, 154.97, 158.08, 155.93, 155.87, 153.15, 156.67, 166.49, 169.05, 163.99, 171.4, 173.3, 171.24, 171.52, 173.97, 176.57, 175.63, 177.19, 179.62, 184.92, 186.32, 192.96, 198.13],
+          borderColor: '#9b59b6',
+          fill: false
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: false,
+          title: {
+            display: true,
+            text: 'MMT CO2 eq'
+          }
+        },
+        x: {
+          title: {
+            display: true,
+            text: 'Year'
+          }
+        }
+      }
+    }
+  });
+</script>
+<h1>Effects of CO₂ and Methane Emissions in Louisiana</h1>
+            <p><strong>Carbon Dioxide (CO₂):</strong> Primarily from the industrial, transportation, and energy sectors, CO₂ emissions contribute to rising temperatures, sea levels, and extreme weather events. Louisiana’s unique coastal regions are particularly vulnerable, facing significant risks of coastal erosion, habitat loss, and economic impacts from disrupted agriculture and fisheries.</p>
+            
+            <p><strong>Methane:</strong> Emissions from natural gas extraction, agriculture, and waste decomposition contribute to Louisiana’s greenhouse gas footprint. Methane, being more potent than CO₂, exacerbates climate effects, leading to increased temperatures, coastal erosion, and saltwater intrusion that affects local ecosystems and human health.</p>
+</body>
+</html>
