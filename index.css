@@ -26,7 +26,6 @@ h1, h2, h3 {
     padding: 0 100px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    transition: background-color 0.3s ease-in-out;
 }
 
 .navbar .logo img {
@@ -64,111 +63,117 @@ h1, h2, h3 {
     background: #e3f2fd;
     min-height: 100vh;
     position: relative;
-    overflow: hidden;
 }
 
-.main_text h1 {
+.hero-text h1 {
     font-size: 3em;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.main_text h2 {
-    font-size: 1.5em;
+.hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
 }
 
-/* Wave Animation */
-.waving_sec {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+.cta-btn {
+    padding: 10px 30px;
+    background-color: #ff5722;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
 }
 
-.waving_sec .wave {
-    position: relative;
-    width: 200%;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.3);
-    animation: wave 4s infinite linear;
-}
-
-.waving_sec .wave1 {
-    z-index: 100;
-    opacity: 0.5;
-}
-
-.waving_sec .wave2 {
-    z-index: 200;
-    opacity: 0.3;
-}
-
-.waving_sec .wave3 {
-    z-index: 300;
-    opacity: 0.1;
-}
-
-@keyframes wave {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+.cta-btn:hover {
+    background-color: #e64a19;
 }
 
 /* Introduction Section */
-.page2 {
+.introduction {
     padding: 50px 100px;
     background-color: #ffffff;
-    margin-top: 60px;
 }
 
-.page2 h2 {
+.introduction h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-.page2 p {
+.introduction p {
     font-size: 1.2em;
     line-height: 1.6;
     max-width: 800px;
 }
 
-/* Story Section */
-.container {
-    background: url(188983.jpg);
-    background-size: cover;
+/* 2D Models Section */
+.models {
     padding: 50px 100px;
-    display: flex;
-    flex-direction: column;
+    background-color: #f0f0f0;
 }
 
-.box {
+.models h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.model-container {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
 }
 
-.inner {
-    display: flex;
-    flex-direction: column;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    padding: 20px;
+.model {
+    width: 48%;
+    margin-bottom: 40px;
+}
+
+.model canvas {
     width: 100%;
+    height: 300px;
 }
 
-.row {
-    transform: rotate(90deg);
+/* Data Visualizations Section */
+.data-visualizations {
+    padding: 50px 100px;
+    background-color: #ffffff;
 }
 
-.content img {
-    max-width: 100%;
+.data-visualizations h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
-.content p {
-    font-size: 1em;
-    line-height: 1.6;
+.chart-container {
+    width: 100%;
+    height: 400px;
+}
+
+/* Action Section */
+.action-section {
+    padding: 50px 100px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.action-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.action-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.action-list li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
