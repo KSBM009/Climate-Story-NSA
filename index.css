@@ -13,6 +13,16 @@ h1, h2, h3 {
     color: #333;
 }
 
+/* Custom Cursor */
+.cursor {
+    pointer-events: none;
+    z-index: 1001;
+    position: absolute;
+}
+.cursor img {
+    width: 50px;
+}
+
 /* Navbar */
 .navbar {
     position: fixed;
@@ -29,13 +39,8 @@ h1, h2, h3 {
     transition: background-color 0.3s ease-in-out;
 }
 
-.navbar.scrolled {
-    background-color: #ff5722;
-}
-
-.navbar .logo h1 {
-    font-size: 1.5em;
-    color: #ff5722;
+.navbar .logo img {
+    width: 80px;
 }
 
 .navbar .nav-links {
@@ -59,116 +64,121 @@ h1, h2, h3 {
     color: #ff5722;
 }
 
-/* Smooth Scroll Animation for Navbar */
-a {
-    transition: all 0.4s ease-in-out;
-}
-
 /* Hero Section */
 .hero {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 100px 100px;
+    text-align: center;
+    padding: 100px 20px;
     background: #e3f2fd;
     min-height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
 
-.hero-content {
-    max-width: 50%;
-}
-
-.hero-content h1 {
+.main_text h1 {
     font-size: 3em;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-.cta-btn {
-    padding: 10px 30px;
-    background-color: #ff5722;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
+.main_text h2 {
+    font-size: 1.5em;
 }
 
-.cta-btn:hover {
-    background-color: #e64a19;
+/* Wave Animation */
+.waving_sec {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
 }
 
-.hero-graphic {
-    max-width: 50%;
+.waving_sec .wave {
+    position: relative;
+    width: 200%;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.3);
+    animation: wave 4s infinite linear;
 }
 
-canvas {
-    background-color: #fff;
-    border-radius: 8px;
+.waving_sec .wave1 {
+    z-index: 100;
+    opacity: 0.5;
+}
+
+.waving_sec .wave2 {
+    z-index: 200;
+    opacity: 0.3;
+}
+
+.waving_sec .wave3 {
+    z-index: 300;
+    opacity: 0.1;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 /* Introduction Section */
-.introduction {
+.page2 {
     padding: 50px 100px;
     background-color: #ffffff;
     margin-top: 60px;
 }
 
-.introduction h2 {
+.page2 h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-.introduction p {
+.page2 p {
     font-size: 1.2em;
     line-height: 1.6;
     max-width: 800px;
 }
 
 /* Story Section */
-.climate-story {
+.container {
+    background: url(188983.jpg);
+    background-size: cover;
     padding: 50px 100px;
-    background-color: #e3f2fd;
+    display: flex;
+    flex-direction: column;
 }
 
-.story-container {
+.box {
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
 }
 
-.story-text {
-    max-width: 45%;
-}
-
-.story-visual {
-    max-width: 45%;
-}
-
-/* Predictive Model Section */
-.predictive-model {
-    padding: 50px 100px;
-    background-color: #ffffff;
-    text-align: center;
-}
-
-.model-link {
-    padding: 10px 30px;
-    background-color: #ff5722;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-}
-
-.model-link:hover {
-    background-color: #e64a19;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
+.inner {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
     padding: 20px;
-    text-align: center;
+    width: 100%;
+}
+
+.row {
+    transform: rotate(90deg);
+}
+
+.content img {
+    max-width: 100%;
+}
+
+.content p {
+    font-size: 1em;
+    line-height: 1.6;
 }

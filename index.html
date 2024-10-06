@@ -3,86 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NASA Climate Story: Telling Climate Data through 2D Models</title>
-    <link rel="stylesheet" href="style.css">
+    <title>NASA Climate Story</title>
+    <link rel="shortcut icon" href="NASA logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
-
 <body>
-    <!-- Navbar Section -->
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor">
+        <img src="Cursor.png" alt="cursor">
+    </div>
+
+    <!-- Navbar -->
     <nav class="navbar">
-        <div class="logo">
-            <h1>NASA Climate Story</h1>
+        <div class="logo" id="logo">
+            <img src="NASA logo.png" alt="Nasa Logo" width="80px">
         </div>
         <ul class="nav-links">
-            <li><a href="#intro-section">Introduction</a></li>
-            <li><a href="#story-section">Climate Story</a></li>
-            <li><a href="#prediction-section">Predictions</a></li>
+            <li id="intro"><a href="#intro_page">Introduction</a></li>
+            <li id="ex"><a href="#examples">Story</a></li>
+            <li id="prediction_btn"><a href="#prediction_widget">Prediction</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>NASA Climate Story: Climate Change in 2D Models</h1>
-            <p>Explore climate change data through interactive models. Learn how climate change impacts different regions and how data drives our understanding of the future.</p>
-            <a href="#story-section" class="cta-btn">Explore Climate Data</a>
+    <section class="sec1" id="sec1">
+        <div class="main_text" id="main_text">
+            <h1 style="margin-bottom: 40px;">Climate Story:</h1>
+            <h1>We don't really know our <span style="color: rgb(255, 179, 0); font-weight: 900;">CO2</span> footprint</h1>
+            <h2>Do we?</h2>
         </div>
-        <div class="hero-graphic">
-            <!-- Placeholder for 2D Model -->
-            <canvas id="modelCanvas"></canvas>
+        <div class="waving_sec">
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
         </div>
     </section>
 
     <!-- Introduction Section -->
-    <section class="introduction" id="intro-section">
-        <h2>Introduction</h2>
-        <p>Over the last several decades, an enormous amount of climate data has been collected from numerous sources. The US Greenhouse Gas (GHG) Center provides public access to this data, but the challenge is how to make sense of it. This website aims to tell a compelling story about climate change through open-source data. Our goal is to educate, motivate, and illustrate the pressing climate issues, such as rising sea levels, extreme weather events, and increasing temperatures.</p>
-    </section>
+    <div class="page2" id="intro_page">
+        <h2>INTRODUCTION</h2>
+        <p>This webpage is designed to tell the story of CO2 emissions and their impact on the environment. Our goal is to give you a clear, comprehensive view of how your carbon footprint affects the planet. Explore the data, learn about the consequences, and discover how your actions can make a difference in shaping a more sustainable future.</p>
+    </div>
 
     <!-- Story Section -->
-    <section class="climate-story" id="story-section">
-        <h2>Climate Change Story</h2>
-        <div class="story-container">
-            <div class="story-text">
-                <h3>CO2 Emissions in Texas</h3>
-                <p>Texas has long been known for its energy-driven economy, which contributes significantly to global CO2 emissions. During the COVID-19 lockdowns, emissions dropped dramatically, showing how small changes can have a big impact.</p>
+    <div class="container" id="examples">
+        <div class="box">
+            <div class="inner">
+                <h2>CO2 Emission Values for Texas, Dallas (2000 - 2022)</h2>
+                <div class="content">
+                    <img src="graph1.jpeg" alt="graph" style="min-height: 90%;">
+                    <p>In Texas, life was once defined by the steady hum of trucks on highways, oil refineries billowing smoke, and airplanes crisscrossing the sky. Day after day, CO2 emissions quietly accumulated as people went about their routines, unaware of the invisible impact on the environment. (Story continues)</p>
+                </div>
             </div>
-            <div class="story-visual">
-                <canvas id="texasChart"></canvas>
+            <img src="row.png" class="row" style="rotate: 270deg; margin-left: 20px;">
+        </div>
+
+        <div class="box">
+            <img src="row.png" class="row">
+            <div class="inner">
+                <h2>CO2 Emission Values for Coastal California (2020 - 2022)</h2>
+                <div class="content">
+                    <img src="graph2.jpeg" alt="graph" style="min-height: 90%;">
+                    <p>The new graph illustrates the environmental changes following the Texas era, highlighting the ongoing challenges faced by the ocean and its carbon dioxide absorption capabilities... (Story continues)</p>
+                </div>
             </div>
         </div>
-        
-        <div class="story-container">
-            <div class="story-text">
-                <h3>California Coastal Emissions</h3>
-                <p>California’s coastal regions face unique challenges from CO2 emissions. The ocean’s ability to absorb CO2 is decreasing, signaling a pressing environmental crisis.</p>
-            </div>
-            <div class="story-visual">
-                <canvas id="californiaChart"></canvas>
+
+        <!-- Machine Learning Model Section -->
+        <div class="box" id="prediction_widget">
+            <img src="row.png" class="row">
+            <div class="inner">
+                <h2>Machine Learning Model</h2>
+                <div class="content" style="flex-direction: column;">
+                    <img src="pred2025.png" alt="graph" style="height: 100%; width: 90%;">
+                    <p>To address these concerns, I developed a machine learning model that utilizes logistic regression to forecast the current environmental situation as either "safe" or "danger." (Model explanation continues)</p>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Predictive Model Section -->
-    <section class="predictive-model" id="prediction-section">
-        <h2>Climate Predictions: Machine Learning Forecast</h2>
-        <div class="prediction-container">
-            <p>Our machine learning model analyzes current environmental trends to forecast whether the situation is “safe” or in “danger”. Explore how data predicts the future of our planet and the impact of CO2 levels.</p>
-            <a href="https://colab.research.google.com/drive/162kjWlXm5yl4gw6nFZKERq5G0XuXxttT" class="model-link">Explore Prediction Model</a>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>NASA Space Apps Hackathon | Climate Storytelling Powered by Data</p>
-    </footer>
-
-    <!-- Scripts for Graphs -->
+    <!-- Script for Smooth Scrolling and Chart -->
     <script src="app.js"></script>
 </body>
 </html>
