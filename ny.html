@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New York Climate Condition</title>
+    <link rel="stylesheet" href="ny.css" />
+    <!-- Add Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Climate Conditions in New York State</h1>
+    </header>
+
+    <section class="controls">
+      <label for="gasType">Select Gas:</label>
+      <select id="gasType">
+        <option value="CO2">CO2 (Carbon Dioxide)</option>
+        <option value="Methane">Methane</option>
+        <option value="NitrousOxide">Nitrous Oxide</option>
+      </select>
+
+      <label for="metricType">Select Metric:</label>
+      <select id="metricType">
+        <option value="ppm">PPM (Parts Per Million)</option>
+        <option value="ppb">PPB (Parts Per Billion)</option>
+      </select>
+    </section>
+
+    <!-- Add Description Section -->
+    <section id="description-section">
+      <h2>Climate Change Overview</h2>
+      <p>
+        New York State has been experiencing the impacts of climate change due
+        to the rise of greenhouse gases in the atmosphere. The most prominent
+        gases contributing to global warming include Carbon Dioxide (CO2),
+        Methane (CH4), and Nitrous Oxide (N2O). Each of these gases has a
+        different global warming potential and contributes to environmental
+        shifts in unique ways.
+      </p>
+
+      <h3>Carbon Dioxide (CO2)</h3>
+      <p>
+        Carbon dioxide is the largest contributor to climate change due to the
+        combustion of fossil fuels such as coal, oil, and gas. It traps heat in
+        the atmosphere and has a long-term impact on temperature rise,
+        contributing to melting glaciers, rising sea levels, and changing
+        weather patterns.
+      </p>
+
+      <h3>Methane (CH4)</h3>
+      <p>
+        Methane is a much more potent greenhouse gas than CO2, although it is
+        less abundant. It primarily originates from agriculture, waste
+        management, and energy production. Methane's impact on climate change is
+        significant due to its high heat-trapping ability.
+      </p>
+
+      <h3>Nitrous Oxide (N2O)</h3>
+      <p>
+        Nitrous oxide is released through agricultural practices, industrial
+        activities, and the combustion of fossil fuels. Although present in
+        smaller quantities, it has a much greater global warming potential than
+        carbon dioxide.
+      </p>
+    </section>
+
+    <section id="map-section">
+      <h2>New York State Climate Map</h2>
+      <p>
+        The map below highlights different regions of New York State that are
+        impacted by varying concentrations of greenhouse gases. Select a gas
+        from the dropdown to see how it affects specific areas.
+      </p>
+      <div id="map" style="height: 500px"></div>
+      <!-- Map container -->
+    </section>
+
+    <section id="graph-section">
+      <h2>Gas Concentration Over Time</h2>
+      <p>
+        The graph below shows the changes in the concentration of the selected
+        gas over time in New York. Use the dropdown to choose between different
+        gases and see how their levels have changed from 1990 to recent years.
+      </p>
+      <canvas id="climateGraph"></canvas>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Climate Info - New York State</p>
+    </footer>
+
+    <!-- Add Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="ny.js"></script>
+  </body>
+</html>

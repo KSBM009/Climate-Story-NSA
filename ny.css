@@ -1,0 +1,176 @@
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #005f99;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+section {
+  margin: 20px auto;
+  max-width: 1100px;
+  padding: 0 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2,
+h3 {
+  color: #005f99;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Controls Section */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #eaeaea;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.controls label {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.controls select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-left: 10px;
+}
+
+/* Description Section */
+#description-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-left: 5px solid #005f99;
+  margin-bottom: 20px;
+}
+
+#description-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+#description-section h3 {
+  margin-top: 30px;
+  font-size: 1.5em;
+}
+
+#description-section p {
+  font-size: 1.05em;
+  color: #555;
+}
+
+/* Map Section */
+#map-section {
+  padding: 20px;
+}
+
+#map-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+#map-section p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+#map {
+  width: 100%;
+  height: 500px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Graph Section */
+#graph-section {
+  padding: 20px;
+}
+
+#graph-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+#graph-section p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+#climateGraph {
+  width: 100%;
+  max-width: 100%;
+  height: 400px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: #005f99;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .controls label {
+    margin-bottom: 10px;
+  }
+
+  .controls select {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  #map {
+    height: 400px;
+  }
+
+  #climateGraph {
+    height: 300px;
+  }
+}
